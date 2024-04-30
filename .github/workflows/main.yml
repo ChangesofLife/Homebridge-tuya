@@ -1,0 +1,26 @@
+name: Terraform CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  terraform_format:
+    name: Check Terraform Format
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v1
+      with:
+        terraform_version: latest
+        
+    - name: Check Terraform Formatting
+      run: terraform fmt -check
+      env:
+        TERRAFORM_CLI_PATH: ${{ github.workspace }}
