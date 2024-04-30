@@ -1,0 +1,6 @@
+cli_config_credentials_hostname: app.terraform.io
+    terraform_version: latest
+    terraform_wrapper: true
+(node:1735) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+/usr/bin/unzip -o -q /home/runner/work/_temp/4abf1c75-2959-40a7-8f2b-a838af02dde6
