@@ -1,0 +1,5 @@
+ terraform plan -input=false
+  shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+  env:
+    TERRAFORM_CLI_PATH: /home/runner/work/_temp/fce4b54c-1324-4831-8f11-3c1c3e79314c
+/home/runner/work/_temp/fce4b54c-1324-4831-8f11-3c1c3e79314c/terraform-bin plan -input=false
