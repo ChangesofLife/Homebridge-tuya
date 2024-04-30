@@ -1,0 +1,23 @@
+name: Terraform Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: latest
+          
+      - name: Initialize Terraform
+        run: terraform init
+        env:
+          TERRAFORM_CLI_PATH: ${{ github.workspace }}
